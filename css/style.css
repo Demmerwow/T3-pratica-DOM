@@ -1,0 +1,160 @@
+/* =========================================
+   RESET E VARIÁVEIS
+   ========================================= */
+:root {
+    --cor-fundo: #0f172a;
+    --cor-card: #1e293b;
+    --cor-texto: #f8fafc;
+    --cor-primaria: #3b82f6; /* Azul */
+    --cor-alerta: #ef4444; /* Vermelho */
+    --cor-sucesso: #22c55e; /* Verde */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.5s; /* Transição suave quando o JS mudar o fundo */
+}
+
+/* =========================================
+   LAYOUT E COMPONENTES
+   ========================================= */
+header {
+    text-align: center;
+    padding: 2rem;
+    background: #0b1120;
+    border-bottom: 1px solid #334155;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.painel {
+    background-color: var(--cor-card);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #334155;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: border-color 0.3s;
+}
+
+.painel h2 {
+    margin-bottom: 1rem;
+    color: var(--cor-primaria);
+}
+
+.painel p {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    color: #cbd5e1;
+}
+
+/* Status Box */
+.status-box {
+    background: #0f172a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid var(--cor-primaria);
+    transition: border-color 0.3s;
+}
+
+#texto-status {
+    margin-bottom: 1rem;
+}
+
+/* Inputs e Botões */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #334155;
+    background: #0f172a;
+    color: white;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+}
+
+button {
+    background: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+#mensagem-boas-vindas {
+    background: #0f172a;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px dashed #334155;
+    text-align: center;
+    font-style: italic;
+    color: #94a3b8;
+}
+
+/* Classes utilitárias que serão usadas pelo JavaScript */
+.estado-alerta {
+    border-color: var(--cor-alerta) !important;
+}
+
+.texto-alerta {
+    color: var(--cor-alerta) !important;
+}
+
+.texto-sucesso {
+    color: var(--cor-sucesso) !important;
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #0b1120;
+    color: #64748b;
+    font-size: 0.9rem;
+}

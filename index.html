@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática DOM - Painel IAS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- O defer garante que o JS só rode depois que o HTML for carregado -->
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Painel de Controle - IAS</h1>
+        <p>Simulação de interatividade com JavaScript</p>
+    </header>
+
+    <main>
+        <!-- PAINEL 1: MODIFICANDO ESTILO -->
+        <section class="painel" id="painel-status">
+            <h2>Status da Instituição</h2>
+            <p>Clique no botão para alternar o status:</p>
+            <div class="status-box">
+                <h3 id="texto-status">Status: Normal</h3>
+                <button id="btn-status">Mudar Status</button>
+            </div>
+        </section>
+
+        <!-- PAINEL 2: RESPONDENDO A INPUTS -->
+        <section class="painel" id="painel-visitante">
+            <h2>Registro de Visitante</h2>
+            <p>Digite seu nome abaixo para receber uma saudação:</p>
+            
+            <label for="input-nome">Nome:</label>
+            <input type="text" id="input-nome" placeholder="Digite seu nome...">
+            
+            <!-- O conteúdo desta div será modificado pelo JS -->
+            <div id="mensagem-boas-vindas">
+                <p>Aguardando interação...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Instituto Arkham do Saber</p>
+    </footer>
+
+</body>
+</html>
